@@ -27,6 +27,8 @@ pipeline {
                 echo "The date is $(date)"
                 echo "Files in $(pwd)"
                 ls
+                ps aux
+                sleep 10
             '''
             sh 'cmatrix'
             echo "Step complete!"
