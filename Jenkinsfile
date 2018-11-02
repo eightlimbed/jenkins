@@ -1,9 +1,7 @@
 pipeline {
 
-  # "agent any" -- what if you have no agent? 
   agent none 
 
-  # environment variables -- in what context?
   environment {
     USERNAME = 'theodore'
     PASSWORD = 'password123'
@@ -32,6 +30,8 @@ pipeline {
             '''
             sh 'cmatrix'
             echo "Step complete!"
+            echo "USERNAME: $USERNAME"
+            echo "PASSWORD: $(PASSWORD)"
           }
         }
       }
