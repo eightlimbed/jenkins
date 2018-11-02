@@ -39,7 +39,10 @@ pipeline {
   post {
     always {
       echo 'POST: Pipeline has finished executing.'
-      archiveArtifacts artifacts: './README.md', fingerprint: true
+      mail to: 'leetgaines@gmail.com',
+           subject: 'Successful Pipeline: ${currentBuild.fullDisplayName}'
+           body: 'Check out the pipeline, dawg! Its at ${env.BUILD_URL}'
+      deleteDir()
     }
     success {
       echo 'POST: Pipeline was a success.'
