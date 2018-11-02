@@ -20,18 +20,16 @@ pipeline {
     stage('build') {
       agent { docker { image 'python:3.4-alpine' } }
       steps {
-        timeout(time: 1, unit: "MINUTES") {
             sh '''
                 echo "Welcome to the first step in the build stage!"
                 echo "The date is $(date)"
                 echo "Files in $(pwd)"
             '''
+            ps aux
             echo "Step complete!"
-            input 'Does this look ok?'
             echo "USERNAME: ${USERNAME}"
             echo "PASSWORD: ${PASSWORD}"
-          }
-        }
+      }
     }
   }
 
