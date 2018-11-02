@@ -24,6 +24,7 @@ pipeline {
                 echo "Welcome to the first step in the build stage!"
                 echo "The date is $(date)"
                 echo "Files in $(pwd)"
+                echo "hello again"
             '''
             echo "Step complete!"
             echo "USERNAME: ${USERNAME}"
