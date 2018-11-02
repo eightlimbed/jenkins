@@ -34,15 +34,13 @@ pipeline {
             echo "PASSWORD: ${PASSWORD}"
           }
         }
-
-    archiveArtifacts 'README.md'
-
     }
   }
 
   post {
     always {
       echo 'POST: Pipeline has finished executing.'
+      archiveArtifacts 'README.md'
     }
     success {
       echo 'POST: Pipeline was a success.'
