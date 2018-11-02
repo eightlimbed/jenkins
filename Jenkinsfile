@@ -29,7 +29,6 @@ pipeline {
                 ps aux
                 sleep 10
             '''
-            sh 'cmatrix'
             echo "Step complete!"
             echo "USERNAME: ${USERNAME}"
             echo "PASSWORD: ${PASSWORD}"
