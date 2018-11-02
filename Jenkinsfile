@@ -1,4 +1,3 @@
-# comment
 pipeline {
   stages {
     stage('build') {
