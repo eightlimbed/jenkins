@@ -1,6 +1,6 @@
 pipeline {
 
-  agent any
+  agent any //this is a comment?
 
   environment {
     USERNAME = 'theodore'
@@ -25,7 +25,6 @@ pipeline {
                 echo "The date is $(date)"
                 echo "Files in $(pwd)"
             '''
-            sh 'ps aux'
             echo "Step complete!"
             echo "USERNAME: ${USERNAME}"
             echo "PASSWORD: ${PASSWORD}"
