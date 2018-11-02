@@ -19,6 +19,7 @@ pipeline {
 
     stage('build') {
       agent { docker { image 'python:3.4-alpine' } }
+      archiveArtifacts 'README.md'
       steps {
         timeout(time: 1, unit: "MINUTES") {
             sh '''
