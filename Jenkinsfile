@@ -25,8 +25,6 @@ pipeline {
                 echo "Welcome to the first step in the build stage!"
                 echo "The date is $(date)"
                 echo "Files in $(pwd)"
-                ls
-                ps aux
             '''
             echo "Step complete!"
             echo "USERNAME: ${USERNAME}"
