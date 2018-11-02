@@ -21,7 +21,6 @@ pipeline {
       agent { docker { image 'python:3.4-alpine' } }
       steps {
         timeout(time: 1, unit: "MINUTES") {
-          retry(3) {
             sh '''
                 echo "Welcome to the first step in the build stage!"
                 echo "The date is $(date)"
@@ -36,7 +35,6 @@ pipeline {
             echo "PASSWORD: ${PASSWORD}"
           }
         }
-      }
 
     }
   }
