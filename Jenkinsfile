@@ -27,6 +27,7 @@ pipeline {
                 echo "Files in $(pwd)"
             '''
             echo "Step complete!"
+            input 'Does this look ok?'
             echo "USERNAME: ${USERNAME}"
             echo "PASSWORD: ${PASSWORD}"
           }
@@ -37,9 +38,6 @@ pipeline {
   post {
     always {
       echo 'POST: Pipeline has finished executing.'
-      mail to: 'leetgaines@gmail.com',
-           subject: 'Successful Pipeline: ${currentBuild.fullDisplayName}',
-           body: 'Check out the pipeline, dawg! Its at ${env.BUILD_URL}'
       deleteDir()
     }
     success {
