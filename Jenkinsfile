@@ -30,8 +30,8 @@ pipeline {
             '''
             sh 'cmatrix'
             echo "Step complete!"
-            echo "USERNAME: $USERNAME"
-            echo "PASSWORD: $(PASSWORD)"
+            echo "USERNAME: ${USERNAME}"
+            echo "PASSWORD: ${PASSWORD}"
           }
         }
       }
