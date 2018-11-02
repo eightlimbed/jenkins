@@ -25,7 +25,7 @@ pipeline {
                 echo "The date is $(date)"
                 echo "Files in $(pwd)"
             '''
-            ps aux
+            sh 'ps aux'
             echo "Step complete!"
             echo "USERNAME: ${USERNAME}"
             echo "PASSWORD: ${PASSWORD}"
