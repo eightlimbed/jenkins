@@ -27,7 +27,6 @@ pipeline {
                 echo "Files in $(pwd)"
                 ls
                 ps aux
-                sleep 10
             '''
             echo "Step complete!"
             echo "USERNAME: ${USERNAME}"
@@ -40,7 +39,7 @@ pipeline {
   post {
     always {
       echo 'POST: Pipeline has finished executing.'
-      archiveArtifacts './README.md'
+      archiveArtifacts artifacts: './README.md', fingerprint: true
     }
     success {
       echo 'POST: Pipeline was a success.'
