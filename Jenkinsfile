@@ -12,6 +12,7 @@ pipeline {
     stage('jenkins_test') {
       agent any
       steps {
+        echo 'In the jenkins_test stage'
         sh 'printenv'
         sh 'whoami'
       }
