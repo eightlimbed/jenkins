@@ -4,7 +4,7 @@ pipeline {
 
   environment {
     USERNAME = 'theodore'
-    PASSWORD = 'password123'
+    PASSWORD = 'new_password'
   }
 
   stages {
