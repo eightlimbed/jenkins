@@ -3,7 +3,7 @@ pipeline {
   agent any //this is a comment?
 
   environment {
-    USERNAME = 'theor'
+    USERNAME = 'thor'
     PASSWORD = 'new_password'
   }
 
